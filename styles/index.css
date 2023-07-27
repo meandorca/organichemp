@@ -1,12 +1,96 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,200;1,500&display=swap");
+
+body {
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #9dc852;
+  font-family: "Jost", sans-serif;
+}
+
+.logo {
+  width: 4em;
+  height: 4em;
+}
+
+.head {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #dddddd;
+  font-size: 4em;
+  font-weight: 400;
+}
+
+h3 {
+  color: #dddddd;
+  font-size: 3em;
+  margin-bottom: -0.1em;
+}
+
+.maincontent {
+  font-size: 1.3em;
+}
+.title {
+  color: #dddddd;
+}
+
+.sub {
+  color: #feec70;
+  font-weight: 200;
+}
+
+.caption {
+  color: #ebebeb;
+}
+
+.homecontent {
+  border-bottom: solid #feeb709e;
+  padding-bottom: 4em;
+}
+
+button,
+.newslink {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  outline: 0;
+  border: 1px solid #3ca643;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:after,
+.newslink:after {
+  content: "";
+  background-color: #feec70;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+button:hover:after,
+.newslink:hover:after {
+  top: 0px;
+  left: 0px;
+}
 
 .menu_main {
-  overflow: hidden;
-  height: 100%;
-  width: 600px;
-  margin: 0 auto;
   background-color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Jost", sans-serif;
   color: #555555;
 }
 
@@ -20,15 +104,17 @@ a {
 }
 
 .menu {
-  display: block;
-  position: relative;
   cursor: pointer;
+}
+
+.menu:hover {
+  margin-right: 4em;
 }
 
 .menu-title {
   display: block;
-  width: 150px;
-  height: 40px;
+  width: 58px;
+  height: 38px;
   padding: 12px 0 0;
   background: #9dc852;
   text-align: center;
@@ -81,6 +167,7 @@ a {
 }
 
 .menu:hover > .menu-title:after {
+  margin-right: 2em;
   border-bottom-width: 5px;
   transition: 0.2s 0.2s border-bottom-width ease-out;
 }
@@ -89,7 +176,7 @@ a {
   min-width: 100%;
   padding: 15px 0;
   position: absolute;
-  background: #ebebeb;
+  background: #feec70;
   z-index: 100;
   transition: 0.5s padding, 0.5s background;
 }
@@ -119,7 +206,7 @@ a {
 }
 
 .menu:not(:hover) > .menu-title:after {
-  border-bottom-color: #dddddd;
+  border-bottom-color: #feec70;
 }
 
 .menu-dropdown > * {
@@ -150,10 +237,6 @@ a {
   z-index: 99;
 }
 
-.menu_body > * {
-  float: left;
-}
-
-.menu_body > * + * {
-  margin-left: 0;
+footer {
+  color: #ebebeb;
 }
