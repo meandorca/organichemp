@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,200;1,500&display=swap");
-
-body {
-  overflow-x: hidden;
-  height: 100%;
-  background-color: #9dc852;
-  font-family: "Jost", sans-serif;
-}
+@import url(./global.css);
+@import url(./partials/_variables.css);
 
 /* navigation code  */
 
@@ -113,7 +108,7 @@ a {
   max-width: 4em;
   padding: 15px 0;
   position: absolute;
-  background: #feec70;
+  background: var(--secondary);
   z-index: 100;
   transition: 0.5s padding, 0.5s background;
 }
@@ -147,7 +142,7 @@ a {
 }
 
 .menu:not(:hover) > .menu-title:after {
-  border-bottom-color: #feec70;
+  border-bottom-color: var(--secondary);
 }
 
 .menu-dropdown > * {
@@ -190,12 +185,62 @@ a {
   margin-top: -1.5em;
   margin-bottom: 2em;
   font-size: 1.3em;
-  color: #feec70;
+  color: var(--secondary);
 }
 
 h1 {
   font-size: 4em;
   color: #3ca643;
+}
+
+.profileHide h2 {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.profileCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  margin-top: -3rem;
+}
+
+.profileTitle {
+  color: grey;
+  font-size: 18px;
+}
+
+.profileB {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.profileImg {
+  width: 100%;
+}
+
+.profileIcon {
+  margin: 24px 0;
+}
+
+.profileContact {
+  width: 3rem;
+  mix-blend-mode: color-burn;
+}
+
+.profileB:hover,
+a:hover {
+  opacity: 0.7;
 }
 
 /* section code */
@@ -241,7 +286,7 @@ section img {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  color: #5d5e5e;
+  color: black;
 }
 
 .thumbnail img {
@@ -282,7 +327,7 @@ section img {
   top: 110px;
   left: 0;
   color: #3ca643;
-  background: #feec70;
+  background: var(--secondary);
   padding: 10px 15px;
   font-size: 14px;
   font-weight: 600;
@@ -299,22 +344,6 @@ section img {
 
 .timestamp {
   color: #ebebeb;
-}
-
-/* footer code  */
-
-footer {
-  color: #ebebeb;
-}
-
-.footnotes {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2em;
-}
-
-.foottag {
-  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -336,6 +365,14 @@ footer {
 
   .menu {
     margin-bottom: 0em;
+  }
+
+  .profileCard {
+    display: flex;
+  }
+
+  .profileHide h2 {
+    text-align: unset;
   }
 }
 

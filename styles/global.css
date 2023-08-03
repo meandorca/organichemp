@@ -1,0 +1,22 @@
+@import url(partials/_variables.css);
+
+body {
+  overflow-x: hidden;
+  height: 100%;
+  background-color: var(--mainc);
+  font-family: "Jost", sans-serif;
+}
+
+footer {
+  color: #ebebeb;
+}
+
+.footnotes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+.foottag {
+  text-align: center;
+}
